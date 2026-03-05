@@ -195,6 +195,24 @@ python scripts/clean_transcript.py <raw_transcript> <cleaned_transcript>
 python scripts/transcribe_audio.py <audio_file> <output_transcript>
 ```
 
+### Batch Processing (Bulk Accounts)
+
+A helper script processes every company folder under `dataset/demo_calls` in one go. It runs the extraction and spec generation for each account, creating
+supporting output directories as needed. After completion the script writes a summary file.
+
+```bash
+python scripts/batch_process_accounts.py
+```
+
+- **input**: `dataset/demo_calls/<company>/transcript_clean.txt` for each account
+- **outputs**:
+  - `outputs/accounts/<company>/v1/account_memo.json`
+  - `outputs/accounts/<company>/v1/agent_spec.json`
+  - **batch summary**: `outputs/batch_summary.json` (accounts processed, successes, failures, time)
+
+Use this when onboarding multiple customers simultaneously or re-generating specs for an entire directory.
+
+
 ---
 
 ## 📁 Dataset Structure
