@@ -1,0 +1,37 @@
+{
+  "account_id": "bens_electric",
+  "company_name": "Ben's Electric",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start": "08:00",
+    "end": "16:30",
+    "timezone": ""
+  },
+  "office_address": "",
+  "services_supported": [
+    "residential electrical work",
+    "commercial electrical work",
+    "service calls"
+  ],
+  "emergency_definition": [
+    "gas station outages",
+    "existing builders emergency calls"
+  ],
+  "emergency_routing_rules": "",
+  "non_emergency_routing_rules": "",
+  "call_transfer_rules": "Transfer call to Ben when caller requests to speak directly.",
+  "integration_constraints": [],
+  "after_hours_flow_summary": "Emergency calls from GNM Pressure Washing gas station properties forwarded.",
+  "office_hours_flow_summary": "AI answers calls first, then transfers to Ben if needed.",
+  "questions_or_unknowns": [
+    "office address not mentioned",
+    "timezone not specified"
+  ],
+  "notes": "Service call fee $115 and hourly rate around $98 mentioned. Onboarding confirmed routing rules."
+}
