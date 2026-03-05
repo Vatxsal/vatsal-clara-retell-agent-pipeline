@@ -1,0 +1,63 @@
+{
+  "name": "demo_calls_pipeline",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "6b926257-c771-4f7a-b7aa-9def2e3bbe44",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/run-demo-pipeline",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "bc8f9ff1-0020-4321-bcbc-87561ccaa542",
+      "name": "Run Demo Pipeline"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Run Demo Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ea573790-e748-42bc-8205-8c604030a719",
+  "meta": {
+    "instanceId": "2df53f341b7c6462733e508499b0df652347498133b1806d2e142e486a9bd681"
+  },
+  "id": "nGRvD3fLloNvQzwo",
+  "tags": []
+}

@@ -1,0 +1,63 @@
+{
+  "name": "onboarding_calls_pipeline",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "dd8f497e-475d-49ad-90ac-0971958b38b2",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/run-onboarding-pipeline",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "01768d3f-bff6-4c3d-ab44-7edf3c395ca1",
+      "name": "Run Onboarding Pipeline"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Run Onboarding Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "bb8df1fa-d0e3-488f-86cc-029b3ea7e461",
+  "meta": {
+    "instanceId": "2df53f341b7c6462733e508499b0df652347498133b1806d2e142e486a9bd681"
+  },
+  "id": "SCAUHV8NhgRXpt9L",
+  "tags": []
+}
