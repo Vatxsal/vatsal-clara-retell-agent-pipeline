@@ -1,4 +1,6 @@
-venv
-__pycache__
-*.log
+venv/
+__pycache__/
 *.pyc
+*.log
+dataset/*.m4a
+dataset/*.mp4
