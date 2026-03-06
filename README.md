@@ -2,6 +2,12 @@
 
 An intelligent agent configuration pipeline that processes call transcripts to automatically extract account data and generate AI receptionist agent specifications for the Retell platform.
 
+## Demo Video
+
+Loom Demo (3–5 minutes):
+
+https://drive.google.com/file/d/1_XPJxzCEHU1B_6tWBfU7k_pN3CCSSbMR/view?usp=drive_link
+
 ## 📋 Table of Contents
 
 - [Architecture & Data Flow](#architecture--data-flow)
